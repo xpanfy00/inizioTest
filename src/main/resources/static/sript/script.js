@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     statusText.textContent = t.loading;
 
     try {
-      const response = await fetch(`http://localhost:8080/search?q=${encodeURIComponent(query)}`);
+      const response = await fetch(`https://iniziotest-production.up.railway.app/search?q=${encodeURIComponent(query)}`);
       if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
 
       statusText.textContent = t.done;
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       saveBtn.onclick = () => {
         const link = document.createElement("a");
-        link.href = `http://localhost:8080/download?q=${encodeURIComponent(query)}`;
+        link.href = `https://iniziotest-production.up.railway.app/download?q=${encodeURIComponent(query)}`;
         link.download = "results.json";
         link.click();
       };
