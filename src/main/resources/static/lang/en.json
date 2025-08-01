@@ -1,0 +1,10 @@
+{
+  "placeholder": "Enter text...",
+  "start": "Start",
+  "save": "Save File",
+  "loading": "🔄 Searching...",
+  "done": "✅ Search completed. File is ready for download.",
+  "error": "❌ Search failed.",
+  "footer1": "© All rights reserved. Panfyorov Yaroslav",
+  "footer2": "Limit: up to 10,000 search queries per day (Google API)."
+}

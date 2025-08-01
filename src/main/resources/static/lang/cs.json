@@ -1,0 +1,10 @@
+{
+  "placeholder": "Zadejte text...",
+  "start": "Spustit",
+  "save": "Stáhnout soubor",
+  "loading": "🔄 Probíhá hledání...",
+  "done": "✅ Hledání dokončeno. Soubor je připraven ke stažení.",
+  "error": "❌ Při hledání došlo k chybě.",
+  "footer1": "© Všechna práva vyhrazena. Panfyorov Yaroslav",
+  "footer2": "Omezení: maximálně 10 000 dotazů za den (limit Google API)."
+}

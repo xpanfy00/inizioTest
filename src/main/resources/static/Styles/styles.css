@@ -1,0 +1,297 @@
+/* === БАЗОВАЯ СЕТКА И ЦВЕТА === */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === ЯЗЫКОВОЙ СЕЛЕКТ === */
+.lang-switcher-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+select {
+  padding: 8px 10px;
+  font-size: 16px;
+  background-color: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* === ОСНОВНОЙ КОНТЕНТ === */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* === ФОРМА === */
+.form-container {
+  background-color: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#startBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+button#startBtn:hover {
+  background-color: #45a049;
+}
+
+button#saveBtn {
+  background-color: #2196f3;
+  color: white;
+}
+
+button#saveBtn:hover {
+  background-color: #1e88e5;
+}
+
+/* === ТЕКСТ СТАТУСА === */
+#statusText {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* === ФУТЕР === */
+footer {
+  margin-top: auto;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  width: 100%;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+/* === АДАПТИВНОСТЬ === */
+
+/* 📱 МОБИЛЬНЫЕ (до 480px) */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  input[type="text"],
+  button,
+  select {
+    font-size: 14px;
+  }
+
+  #statusText {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+
+/* 📱 Планшеты (до 768px) */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%;
+    padding: 25px 30px;
+  }
+
+  input[type="text"],
+  button,
+  select {
+    font-size: 15px;
+  }
+
+  #statusText {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}
+
+/* 💻 Ноутбуки и FHD (до 1920px) */
+@media (min-width: 769px) and (max-width: 1920px) {
+  .form-container {
+    max-width: 400px;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 16px;
+  }
+}
+
+/* 🖥️ 2K и выше */
+@media (min-width: 1921px) {
+  .form-container {
+    max-width: 450px;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 18px;
+  }
+
+  select {
+    font-size: 17px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --input-bg: #f0f0f0;
+  --container-bg: #f9f9f9;
+  --btn-start: #4caf50;
+  --btn-save: #2196f3;
+  --footer-text: #444;
+}
+
+html.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --input-bg: #2b2b2b;
+  --container-bg: #1e1e1e;
+  --btn-start: #4caf50;
+  --btn-save: #2196f3;
+  --footer-text: #aaa;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+input[type="text"], select {
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+.form-container {
+  background-color: var(--container-bg);
+}
+
+button#startBtn {
+  background-color: var(--btn-start);
+}
+
+button#saveBtn {
+  background-color: var(--btn-save);
+}
+
+footer {
+  color: var(--footer-text);
+}
+
+footer hr {
+  border-top: 1px solid var(--footer-text);
+}
+
+/* Переключатель */
+.theme-switcher-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: .4s;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+

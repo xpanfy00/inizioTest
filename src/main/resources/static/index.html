@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Google Search</title>
+  <link rel="stylesheet" href="./Styles/styles.css" />
+</head>
+<body>
+<main>
+  <div class="main-content">
+
+    <div class="theme-switcher-wrapper">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+
+    <div class="lang-switcher-wrapper">
+      <select id="langSwitcher">
+        <option value="cs">CS</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+
+    <div class="form-container">
+      <input id="searchInput" type="text" placeholder="Enter text..." />
+      <button id="startBtn">Start</button>
+      <button id="saveBtn" style="display: none;">Save File</button>
+      <p id="statusText"></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <hr>
+  <p id="footer1"></p>
+  <p id="footer2"></p>
+  <p id="footer3"></p>
+</footer>
+
+<script src="sript/script.js"></script>
+</body>
+</html>
