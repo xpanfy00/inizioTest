@@ -25,6 +25,8 @@ public class SearchController {
         this.googleApiSearchService = googleApiSearchService;
     }
 
+
+
     //Endpoint  for search  only
     @GetMapping("/search")
     public List<SearchResult> getResults(@RequestParam String q) throws Exception {
